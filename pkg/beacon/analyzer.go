@@ -92,8 +92,8 @@ func (a *analyzer) start() {
 				//since we are calculating the times in between readings
 				tsLength := len(res.TsList) - 1
 				dsLength := len(res.OrigBytesList)
-				fmt.Println("tsLength=" tsLength)
-				fmt.Println("dsLength="  dsLength)
+				fmt.Println("tsLength=", tsLength)
+				fmt.Println("dsLength=",  dsLength)
 				
 
 				//find the delta times between the timestamps
