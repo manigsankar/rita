@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"runtime"
 
@@ -24,6 +25,7 @@ func main() {
 
 	// Define commands used with this application
 	app.Commands = commands.Commands()
+	fmt.println("I am in main***************************")
 
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	app.Run(os.Args)
