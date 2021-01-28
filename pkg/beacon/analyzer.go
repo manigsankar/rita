@@ -32,7 +32,7 @@ type (
 
 //newAnalyzer creates a new collector for gathering data
 func newAnalyzer(min int64, max int64, chunk int, db *database.DB, conf *config.Config, analyzedCallback func(*update), closedCallback func()) *analyzer {
-	fmt.Println("I am printing ******************************")
+	fmt.Println("I am NEWANALYZER ******************************")
 	return &analyzer{
 		tsMin:            min,
 		tsMax:            max,
@@ -92,6 +92,9 @@ func (a *analyzer) start() {
 				//since we are calculating the times in between readings
 				tsLength := len(res.TsList) - 1
 				dsLength := len(res.OrigBytesList)
+				fmt.Println("tsLength=" tsLength)
+				fmt.Println("dsLength"=dsLength)
+				
 
 				//find the delta times between the timestamps
 				diff := make([]int64, tsLength)
