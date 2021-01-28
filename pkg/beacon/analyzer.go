@@ -1,6 +1,7 @@
 package beacon
 
 import (
+	"fmt"
 	"github.com/activecm/rita/pkg/data"
 	"math"
 	"sort"
@@ -31,6 +32,7 @@ type (
 
 //newAnalyzer creates a new collector for gathering data
 func newAnalyzer(min int64, max int64, chunk int, db *database.DB, conf *config.Config, analyzedCallback func(*update), closedCallback func()) *analyzer {
+	fmt.println("I am printing ******************************")
 	return &analyzer{
 		tsMin:            min,
 		tsMax:            max,
