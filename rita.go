@@ -25,7 +25,7 @@ func main() {
 
 	// Define commands used with this application
 	app.Commands = commands.Commands()
-	fmt.println("I am in main***************************")
+	fmt.Println("I am in main***************************")
 
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	app.Run(os.Args)
